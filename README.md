@@ -1,16 +1,16 @@
-# DOCUMENTACION PROYECTO
+# DOCUMENTACION PROYECTO :dart::octocat:
 
 Proyecto desarrollado con el fin de modificar la zona horaria de los eventos del arsaigth.
 
-## 1. Nombre
+## 1. Nombre :computer:
 
 Modificación de zona horaria y registro historico de los eventos de seguridad.
 
-## 2. Descripción
+## 2. Descripción 	:bookmark_tabs:
 
 Recibir los eventos que se activan por violación de seguridad, permitiendo capturarlos desde el topico de pubsub para su posterior almacenamiento y modificación zona horaria en bigquery, finalizando con la publicación del mensaje del evento en el topico que consume el arsaigth.
 
-## 3. Instalación
+## 3. Instalación :jigsaw:
 
 Instalar en el entorno virtual las herramientas google y version de librerias a utilizar.
 
@@ -18,7 +18,7 @@ Instalar en el entorno virtual las herramientas google y version de librerias a 
 $ pip install -r app/requirements.txt
 ```
 
-## 4. Despliegue Cloud Functions:
+## 4. Despliegue Cloud Functions:  :writing_hand:
 
 1. Creación del trigger "activador".
 
@@ -83,7 +83,7 @@ Publicador de mensajes en topico Pub/Sub
     DELETE FROM `gcp-st-transit-multi-cloud.AuditLogOperations.messages_pubsub_arsight` WHERE flag >=0
     ```
 
-## 4. Lógica del Desarrollo:
+## 5. Lógica del Desarrollo: :electron:
 
 *./app/main*
 
@@ -100,19 +100,19 @@ Si la publicación en el topico es exitosa el mensaje en bigquery es marcado con
 
 **Nota:** Este scrypt en el despliegue de la cloud functions debe remplazarce por *main.py* y con punto de entrada *main*.
 
-## 5. Roadmap - Ideas
+## 6. Roadmap - Ideas :roller_coaster:
 * [x] Realizar un desarrollo con programación orientada a objetos.
 
 * [ ] Generar integración para pruebas unitarias.
 
-## 6. Autor
+## 7. Autor :technologist:
 Cristian Beltrán -- Data Engineer
 
-## 7. Referencias
+## 8. Referencias :books:
 > Pub/Sub (2022). [cloud.google.com](https://cloud.google.com/pubsub?hl=es-419)
 > Pub/Sub Publisher (2022). [cloud.google.com](https://cloud.google.com/pubsub/docs/publisher)
 
-## 8. Estado del Proyecto - Fases Devops
+## 9. Estado del Proyecto - Fases Devops :construction:
 * [x] Fase de Planeación (Entendimiento del brief. Roadmap)
 * [x] Fase de Construcción (Generación de Diseño y Código del desarrollo)
 * [x] Fase de Integración Continua (Testeo, calidad con sonar. Pruebas unitarias)
