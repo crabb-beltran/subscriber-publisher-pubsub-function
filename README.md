@@ -52,13 +52,13 @@ Publicador de mensajes en topico Pub/Sub
 
     ```bash
     #Path de la ubicación del json service_accounts
-    export GOOGLE_APPLICATION_CREDENTIALS='C:\Users\crist\OneDrive\Escritorio\Proyectos\BdB\service_accounts\bdb-gcp-st-transit-multi-cloud-2594cebbd43e.json'
+    export GOOGLE_APPLICATION_CREDENTIALS='C:\gcp-st-transit-multi-cloud-2594cebbd43e.json'
 
-    export PROJECT_ID='bdb-gcp-st-transit-multi-cloud'
-    export TOPIC_ID='bdb-gcp-st-tmc-top-03'
+    export PROJECT_ID='gcp-st-transit-multi-cloud'
+    export TOPIC_ID='gcp-st-tmc-top-03'
     export DATASET_ID='AuditLogOperations'
     export TABLE_ID='messages_pubsub_arsight'
-    export BUCKET_IN='bdb-gcp-st-tmc-audit'
+    export BUCKET_IN='gcp-st-tmc-audit'
     ```
 
     3.10. Verificar existencia de las variables de entorno creadas:
@@ -78,9 +78,9 @@ Publicador de mensajes en topico Pub/Sub
     3.11. Verificación de registro y modificación desde Bigquery.
     ```sql
     SELECT JSON_QUERY(messages, "$.receiveTimestamp"),*
-    FROM `bdb-gcp-st-transit-multi-cloud.AuditLogOperations.messages_pubsub_arsight`
+    FROM `gcp-st-transit-multi-cloud.AuditLogOperations.messages_pubsub_arsight`
 
-    DELETE FROM `bdb-gcp-st-transit-multi-cloud.AuditLogOperations.messages_pubsub_arsight` WHERE flag >=0
+    DELETE FROM `gcp-st-transit-multi-cloud.AuditLogOperations.messages_pubsub_arsight` WHERE flag >=0
     ```
 
 ## 4. Lógica del Desarrollo:
